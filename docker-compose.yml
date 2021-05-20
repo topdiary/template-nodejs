@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  demo-api:
+    container_name: demo-api
+    image: demo/api
+    env_file:
+      - ./env/.development.local.env
+    build:
+      context: .
+      target: builder
+    volumes:
+        - .:/app/
+        - /app/node_modules
+    command: yarn start:dev
+    restart: always
+    ports:
+      - 3000:3000
