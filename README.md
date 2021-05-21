@@ -4,6 +4,6 @@
 - Lint
 - Docker (Multi-stage build)
 - Docker Compose
-- syslog supported
+- syslog
 - Express Hello
 - ENV
