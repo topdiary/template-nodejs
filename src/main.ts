@@ -9,7 +9,7 @@ const bootstrap = () => {
   const app: Application = express()
 
   app.get('/', (_: Request, res: Response) => {
-    res.send('👋🏻 Hi!')
+    res.send('Hola, 🛸')
   })
 
   app.listen(process.env.APP_SERVICE_PORT)
