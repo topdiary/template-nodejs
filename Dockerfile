@@ -1,5 +1,6 @@
 FROM node:14.17.0-alpine as builder
 ENV NODE_ENV=development \
+    APP_ENV=development \
     TZ=Asia/Bangkok
 WORKDIR /app
 COPY package.json yarn.loc* ts*.json *.js /app/
@@ -10,6 +11,7 @@ RUN yarn build
 ### --- End of Builder ---
 FROM node:14.17.0-alpine
 ENV NODE_ENV=production \
+    APP_ENV=development \
     TZ=Asia/Bangkok
 WORKDIR /app
 COPY package.json yarn.loc* ts*.json *.js /app/

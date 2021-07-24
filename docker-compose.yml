@@ -1,9 +1,9 @@
 version: "3.8"
 
 services:
-  demo-api:
-    container_name: demo-api
-    image: demo/api
+  demo-node-api:
+    container_name: demo-node-api
+    image: demo/node-api
     env_file:
       - ./env/.development.local.env
     build:
