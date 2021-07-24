@@ -8,8 +8,9 @@ logger.info(
 const bootstrap = () => {
   const app: Application = express()
 
-  app.get('/', (_: Request, res: Response) => {
-    res.send('Hola, 🛸')
+  app.get('/health', (_: Request, res: Response) => {
+    const message = 'Hola, 🛸'
+    res.status(200).json({ message })
   })
 
   app.listen(process.env.APP_SERVICE_PORT)
