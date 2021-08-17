@@ -1,4 +1,4 @@
-FROM node:14.17.3-alpine as builder
+FROM node:14.17.5-alpine as builder
 ENV NODE_ENV=development \
     APP_ENV=development \
     TZ=Asia/Bangkok
@@ -9,7 +9,7 @@ RUN yarn install && \
 COPY . .
 RUN yarn build
 ### --- End of Builder ---
-FROM node:14.17.3-alpine
+FROM node:14.17.5-alpine
 ENV NODE_ENV=production \
     APP_ENV=production \
     TZ=Asia/Bangkok
